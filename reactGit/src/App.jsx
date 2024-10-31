@@ -1,15 +1,17 @@
 import { useState } from 'react'
 
 function App() {
-  const [input,setInput] = useState();
+  const [count, setCount] = useState(0)
 
   return (
     <>
       
-        <input placeholder='type...' onChange={(e)=>{setInput(e.target.value)}}></input>
-       <h1>{input}</h1>
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+       
     </>
   )
 }
 
-export default App
+export default App;
