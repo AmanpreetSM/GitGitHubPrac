@@ -1,15 +1,13 @@
 import { useState } from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [input,setInput] = useState();
 
   return (
     <>
       
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-       
+        <input placeholder='type...' onChange={(e)=>{setInput(e.target.value)}}></input>
+       <h1>{input}</h1>
     </>
   )
 }
